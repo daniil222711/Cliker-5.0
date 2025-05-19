@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Кликер Темщика</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <button id="menu-toggle" class="menu-button">☰</button>
+  </div>
+
+  <h1>Кликер Темщика</h1>
+  <div id="count">0 рублей</div>
+  <div id="cps">0 кликов/сек</div>
+  <button id="clicker-button">Кликни меня</button>
+
+  <!-- Анимации кликов -->
+  <div id="click-effects"></div>
+
+  <!-- Меню улучшений -->
+  <div id="upgrade-panel" class="hidden">
+    <div class="upgrade" onclick="buyUpgrade('autoClick')">Запуск Темки (+1/сек)</div>
+    <div class="upgrade" onclick="buyUpgrade('clickBoost')">Сила клика x2</div>
+  </div>
+  <button id="upgrade-toggle">Улучшения</button>
+
+  <!-- Магазин -->
+  <div id="shop-panel" class="hidden">
+    <div class="upgrade" onclick="applySpecial('x3')">Навсегда x3</div>
+    <div class="upgrade" onclick="applySpecial('x4')">Навсегда x4</div>
+    <div class="upgrade" onclick="applySpecial('money')">Получить 10 000₽</div>
+    <a href="https://t.me/KinoRust" target="_blank" class="upgrade">Наш Telegram</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
